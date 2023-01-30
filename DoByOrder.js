@@ -24,9 +24,11 @@ const tasks = [a, b, c];
 
 
 const doByOrder = (tasks, callback) => {
-  a(callback);
-  b(callback);
-  c(callback);
+  a(callback)
+  setTimeout(() => {
+    b(callback)
+    c(callback)
+  }, 500)
   // modify this function to log "a" => "b" => "c"
 }
 
